@@ -1,3 +1,4 @@
+import { CadastroAutoresComponent } from './autores/cadastro-autores/cadastro-autores.component';
 import { HomeComponent } from './home/home.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -16,6 +17,10 @@ const routes: Routes = [
   {
     path: 'autores',
     component: AutoresComponent
+  },
+  {
+    path: 'cadastrar-autores',
+    component: CadastroAutoresComponent
   },
 ];
 

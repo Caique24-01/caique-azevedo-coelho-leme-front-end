@@ -1,6 +1,6 @@
-import { AutoresService } from './autores.service';
 import { Autor } from 'src/app/autor';
 import { Component, OnInit } from '@angular/core';
+import { AutoresService } from '../services/autores-service.service';
 
 
 @Component({
@@ -26,6 +26,7 @@ export class AutoresComponent implements OnInit {
       this.autores = autores;
     }, error => {
       this.error = "Estamos com problema no servidor, tente novamente mais tarde!"
+      //alert(this.error);
     });
   }
 

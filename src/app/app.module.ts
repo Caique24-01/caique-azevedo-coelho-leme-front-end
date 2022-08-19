@@ -7,6 +7,8 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { AutoresComponent } from './autores/autores.component';
 import { CadastroAutoresComponent } from './autores/cadastro-autores/cadastro-autores.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormAutorComponent } from './autores/form-autor/form-autor.component';
 
 @NgModule({
   declarations: [
@@ -14,11 +16,14 @@ import { CadastroAutoresComponent } from './autores/cadastro-autores/cadastro-au
     HomeComponent,
     AutoresComponent,
     CadastroAutoresComponent,
+    FormAutorComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

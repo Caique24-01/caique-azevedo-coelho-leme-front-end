@@ -9,7 +9,7 @@
         <th class="col-3">#</th>
         <th class="col-5">Nome autor:</th>
         <th class="col">
-          <button class="btn">Cadastrar</button>
+          <button class="btn" routerLink="/cadastrar-autores">Cadastrar</button>
         </th>
       </tr>
     </thead>
@@ -24,5 +24,5 @@
   </table>
 </div>
 <ng-template #listaVazia>
-  <h2  class="text-center" #listaVazia>Nenhum autor cadastrado</h2>
+  <h2  class="bg-danger text-center" #listaVazia>Nenhum autor cadastrado</h2>
 </ng-template>

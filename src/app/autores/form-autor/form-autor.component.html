@@ -1,0 +1,25 @@
+<form (ngSubmit)="submit()" [formGroup]="autorForm" #formDir="ngForm">
+  <div class="container">
+    <h3 class="text-center">Preencha o formulário para cadastrar um novo autor: </h3>
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <div class="input-group-text" id="labelNome">Nome: </div>
+      </div>
+      <input type="text" class="form-control" placeholder="Nome Completo" formControlName="nome"
+        aria-label="Input group example" aria-describedby="labelNome">
+    </div>
+    <div *ngIf="nome.invalid && formDir.submitted" class="text-danger">
+      <p *ngIf="nome.errors?.['required']">O título é obrigatório.</p>
+    </div>
+    <div class="input-group mt-5">
+      <div class="input-group-prepend">
+        <span class="input-group-text">Biografia: </span>
+      </div>
+      <textarea formControlName="biografia" class="form-control" aria-label="With textarea"></textarea>
+    </div>
+    <div *ngIf="biografia.invalid && formDir.submitted" class="text-danger">
+      <p *ngIf="biografia.errors?.['required']">A descrição é obrigatória.</p>
+    </div>
+    <input type="submit" class="btn btn-lg btn-block my-5" value="{{ btnText }}">
+  </div>
+</form>

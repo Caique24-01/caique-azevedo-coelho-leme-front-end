@@ -20,4 +20,8 @@ export class AutoresService {
   listarTodos(): Observable<Autor[]> {
     return this.httpClient.get<Autor[]>(environment.URL_API + '/autores');
   }
+
+  cadastrar(formData: Autor): Observable<Autor> {
+    return this.httpClient.post<Autor>(environment.URL_API + '/autores', formData);
+  }
 }
