@@ -17,9 +17,9 @@
       </div>
       <textarea formControlName="biografia" class="form-control" aria-label="With textarea"></textarea>
     </div>
-    <div *ngIf="biografia.invalid && formDir.submitted" class="text-danger">
-      <p *ngIf="biografia.errors?.['required']">A descrição é obrigatória.</p>
+    <div *ngIf="biografia.invalid && formDir.submitted" class="">
+      <p *ngIf="biografia.errors?.['required']" class="text-danger d-block mt-2">A biografia é obrigatória.</p>
     </div>
-    <input type="submit" class="btn btn-lg btn-block my-5" value="{{ btnText }}">
+    <input type="submit" class="btn btn-lg btn-block my-5" value="{{btnText}}" >
   </div>
 </form>

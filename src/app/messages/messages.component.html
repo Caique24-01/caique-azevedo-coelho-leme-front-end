@@ -1,0 +1,8 @@
+<div class="my-4" *ngIf="messagesService.message">
+  <div>
+    <h2 class="text-center">Mensagem do Sistema:</h2>
+  </div>
+  <p class="text-center font-weight-bold">{{ messagesService.message }}</p>
+  <button class="btn btn-sm btn-outline-dark float-right" (click)="messagesService.clear()">Ok</button>
+</div>
+

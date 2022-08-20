@@ -14,7 +14,9 @@ export class FormAutorComponent implements OnInit {
   autorForm!: FormGroup;
 
 
-  constructor() {}
+  constructor(
+
+  ) {}
 
   ngOnInit(): void {
     this.autorForm = new FormGroup({
@@ -36,10 +38,7 @@ export class FormAutorComponent implements OnInit {
     if (this.autorForm.invalid) {
       return;
     }
-
     var autorNovo = this.autorForm.getRawValue() as Autor;
-    console.log(autorNovo);
-
     this.onSubmit.emit(autorNovo);
   }
 

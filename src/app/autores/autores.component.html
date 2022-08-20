@@ -2,8 +2,8 @@
   <h1 class="text-center p-4 mb-5" style="margin:0%">Lista de autores cadastrados:</h1>
 </div>
 <div class="container">
-
-  <table class="table">
+  <app-messages class="d-flex justify-content-center text-success"></app-messages>
+  <table class="table border border-dark">
     <thead>
       <tr>
         <th class="col-3">#</th>
@@ -24,5 +24,7 @@
   </table>
 </div>
 <ng-template #listaVazia>
-  <h2  class="bg-danger text-center" #listaVazia>Nenhum autor cadastrado</h2>
+  <h2  class="text-center text-danger" #listaVazia>Nenhum autor cadastrado</h2>
 </ng-template>
+<app-message-erro-api class="text-center h1" *ngIf="erroRequisicao" mensagem="{{ mensagemErroRequisicao }}">
+</app-message-erro-api>
