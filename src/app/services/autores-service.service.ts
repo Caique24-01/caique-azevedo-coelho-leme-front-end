@@ -1,8 +1,10 @@
+//import { Response } from './../response';
 import { environment } from './../../environments/environment';
 import { Autor } from 'src/app/autor';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { Response } from '../response';
 
 
 
@@ -23,5 +25,13 @@ export class AutoresService {
 
   cadastrar(formData: Autor): Observable<Autor> {
     return this.httpClient.post<Autor>(environment.URL_API + '/autores', formData);
+  }
+
+  getAutor(id: number): Observable<Autor> {
+    return this.httpClient.get<Autor>(environment.URL_API + '/autores/' + id);
+  }
+
+  editarAutor(id: number, formData: Autor): Observable<Autor>{
+    return this.httpClient.put<Autor>(environment.URL_API + '/autores/' + id, formData);
   }
 }

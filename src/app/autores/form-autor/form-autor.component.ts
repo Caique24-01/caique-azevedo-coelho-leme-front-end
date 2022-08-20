@@ -10,6 +10,7 @@ import { Autor } from 'src/app/autor';
 export class FormAutorComponent implements OnInit {
   @Output() onSubmit = new EventEmitter<Autor>();
   @Input() btnText! : string
+  @Input() autorData: Autor | null = null;
 
   autorForm!: FormGroup;
 
@@ -20,9 +21,9 @@ export class FormAutorComponent implements OnInit {
 
   ngOnInit(): void {
     this.autorForm = new FormGroup({
-      id: new FormControl(''),
-      nome: new FormControl('', [Validators.required]),
-      biografia: new FormControl('', [Validators.required])
+      id: new FormControl(this.autorData ? this.autorData.id : ''),
+      nome: new FormControl(this.autorData ? this.autorData.nome : '', [Validators.required]),
+      biografia: new FormControl(this.autorData ? this.autorData.biografia : '', [Validators.required])
     })
   }
 

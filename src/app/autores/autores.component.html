@@ -9,7 +9,7 @@
         <th class="col-3">#</th>
         <th class="col-5">Nome autor:</th>
         <th class="col">
-          <button class="btn" routerLink="/cadastrar-autores">Cadastrar</button>
+          <button class="btn btn-outline-primary" routerLink="/cadastrar-autores">Cadastrar</button>
         </th>
       </tr>
     </thead>
@@ -17,8 +17,7 @@
       <tr *ngFor="let autor of autores">
         <td>{{ autor.id }}</td>
         <td>{{ autor.nome }}</td>
-        <button class="btn btn-sm m-1">atualizar</button>
-        <button class="btn btn-sm m-1">remover</button>
+        <button class="btn btn-outline-primary btn-sm m-1" routerLink="/atualizar-autores/{{ autor.id}}">Editar</button>
       </tr>
     </tbody>
   </table>
