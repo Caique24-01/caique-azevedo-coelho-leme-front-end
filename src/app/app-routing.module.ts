@@ -7,6 +7,7 @@ import { AtualizarAutoresComponent } from './autores/atualizar-autores/atualizar
 import { LivrosComponent } from './livros/livros.component';
 import { RemoverLivroComponent } from './livros/remover-livro/remover-livro.component';
 import { CadastrarLivrosComponent } from './livros/cadastrar-livros/cadastrar-livros.component';
+import { AtualizarLivroComponent } from './livros/atualizar-livro/atualizar-livro.component';
 
 const routes: Routes = [
   {
@@ -37,6 +38,10 @@ const routes: Routes = [
   {
     path: 'atualizar-autores/:id',
     component: AtualizarAutoresComponent
+  },
+  {
+    path: 'atualizar-livro/:id',
+    component: AtualizarLivroComponent
   },
   {
     path: 'remover-livro/:id',

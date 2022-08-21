@@ -11,6 +11,7 @@ export class FormLivroComponent implements OnInit {
 
   @Output() onSubmit = new EventEmitter<Livro>();
   @Input() btnText! : string
+  @Input() livroData: Livro | null = null;
 
   livroForm!: FormGroup
 
@@ -18,10 +19,10 @@ export class FormLivroComponent implements OnInit {
 
   ngOnInit(): void {
     this.livroForm = new FormGroup({
-      id: new FormControl(''),
-      titulo: new FormControl('', [Validators.required]),
-      anoLancamento: new FormControl('', [Validators.required]),
-      autoresIds: new FormControl('', [Validators.required])
+      id: new FormControl(this.livroData ? this.livroData.id : ''),
+      titulo: new FormControl(this.livroData ? this.livroData.titulo : '', [Validators.required]),
+      anoLancamento: new FormControl(this.livroData ? this.livroData.anoLancamento : '', [Validators.required]),
+      autoresIds: new FormControl(this.livroData ? this.livroData.autoresIds : '', [Validators.required])
     })
   }
 
@@ -43,9 +44,9 @@ export class FormLivroComponent implements OnInit {
     }
     var livro = this.livroForm.getRawValue() as Livro;
 
-    var listaAutoresTexto = this.livroForm.get('autoresIds')?.value;
-    var listaDeAutores = listaAutoresTexto.split(',');
-    livro.autoresIds = listaDeAutores;
+    var listaTexto = this.livroForm.get('autoresIds')?.value;
+    var listaNumeros = listaTexto.split(',');
+    livro.autoresIds = listaNumeros;
 
     this.onSubmit.emit(livro);
   }

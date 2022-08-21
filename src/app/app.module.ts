@@ -17,6 +17,7 @@ import { LivrosComponent } from './livros/livros.component';
 import { RemoverLivroComponent } from './livros/remover-livro/remover-livro.component';
 import { CadastrarLivrosComponent } from './livros/cadastrar-livros/cadastrar-livros.component';
 import { FormLivroComponent } from './livros/form-livro/form-livro.component';
+import { AtualizarLivroComponent } from './livros/atualizar-livro/atualizar-livro.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,6 +32,7 @@ import { FormLivroComponent } from './livros/form-livro/form-livro.component';
     RemoverLivroComponent,
     CadastrarLivrosComponent,
     FormLivroComponent,
+    AtualizarLivroComponent,
   ],
   imports: [
     BrowserModule,

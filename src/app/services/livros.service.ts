@@ -23,11 +23,11 @@ export class LivrosService {
     return this.httpClient.post<Livro>(environment.URL_API + '/livros', formData);
   }
 
-  // getLivro(id: number): Observable<Livro> {
-  //   return this.httpClient.get<Livro>(environment.URL_API + '/livros/' + id);
-  // }
+  getLivro(id: number): Observable<Livro> {
+    return this.httpClient.get<Livro>(environment.URL_API + '/livros/' + id);
+  }
 
-  // editarLivro(id: number, formData: Livro): Observable<Livro>{
-  //   return this.httpClient.put<Livro>(environment.URL_API + '/livros/' + id, formData);
-  // }
+  editarLivro(id: number, formData: Livro): Observable<Livro>{
+    return this.httpClient.put<Livro>(environment.URL_API + '/livros/' + id, formData);
+  }
 }

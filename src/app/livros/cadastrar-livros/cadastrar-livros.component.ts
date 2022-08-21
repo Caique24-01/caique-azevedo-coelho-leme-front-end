@@ -34,7 +34,7 @@ export class CadastrarLivrosComponent implements OnInit {
       },
       error: (erro) => {
         if (erro.status == 400) {
-          this.messagesService.add('Dados de cadastro incorreto');
+          this.messagesService.add('Dados de cadastro incorretos!');
         } else {
           this.mensagemErro =
             'Erro ao conectar com servidor, tente novamente mais tarde';

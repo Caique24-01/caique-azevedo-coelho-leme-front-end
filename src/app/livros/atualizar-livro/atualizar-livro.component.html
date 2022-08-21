@@ -1,7 +1,7 @@
-<div class="container-fluid" *ngIf="autor">
+<div class="container-fluid" *ngIf="livro">
   <h1 class="text-center p-4 mb-5" style="margin:0%">Editar autor:</h1>
   <app-messages class="d-flex justify-content-center text-danger"></app-messages>
-  <app-form-autor (onSubmit)="editar($event)" [btnText]="btnText" [autorData]="autor"></app-form-autor>
+  <app-form-livro (onSubmit)="editar($event)" [btnText]="btnText" [livroData]="livro"></app-form-livro>
 </div>
 <app-message-erro-api class="text-center h1" *ngIf="erro" mensagem="{{ mensagemErro }}">
 </app-message-erro-api>
