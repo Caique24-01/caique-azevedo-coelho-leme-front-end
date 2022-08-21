@@ -13,6 +13,7 @@ import { MessagesComponent } from './messages/messages.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { MessageErroApiComponent } from './components/message-erro-api/message-erro-api.component';
 import { AtualizarAutoresComponent } from './autores/atualizar-autores/atualizar-autores.component';
+import { LivrosComponent } from './livros/livros.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { AtualizarAutoresComponent } from './autores/atualizar-autores/atualizar
     MessagesComponent,
     MessageErroApiComponent,
     AtualizarAutoresComponent,
+    LivrosComponent,
   ],
   imports: [
     BrowserModule,
