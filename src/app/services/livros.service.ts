@@ -19,9 +19,9 @@ export class LivrosService {
     return this.httpClient.get<Livro[]>(environment.URL_API + '/livros')
   }
 
-  // cadastrar(formData: Livro): Observable<Livro> {
-  //   return this.httpClient.post<Livro>(environment.URL_API + '/livros', formData);
-  // }
+  cadastrar(formData: Livro): Observable<Livro> {
+    return this.httpClient.post<Livro>(environment.URL_API + '/livros', formData);
+  }
 
   // getLivro(id: number): Observable<Livro> {
   //   return this.httpClient.get<Livro>(environment.URL_API + '/livros/' + id);

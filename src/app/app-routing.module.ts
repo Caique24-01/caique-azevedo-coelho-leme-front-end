@@ -5,6 +5,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { AutoresComponent } from './autores/autores.component';
 import { AtualizarAutoresComponent } from './autores/atualizar-autores/atualizar-autores.component';
 import { LivrosComponent } from './livros/livros.component';
+import { RemoverLivroComponent } from './livros/remover-livro/remover-livro.component';
+import { CadastrarLivrosComponent } from './livros/cadastrar-livros/cadastrar-livros.component';
 
 const routes: Routes = [
   {
@@ -28,13 +30,17 @@ const routes: Routes = [
     path: 'cadastrar-autores',
     component: CadastroAutoresComponent
   },
-  // {
-  //   path: 'cadastrar-livros',
-  //   component: CadastrarLivrosComponent
-  // },
+  {
+    path: 'cadastrar-livros',
+    component: CadastrarLivrosComponent
+  },
   {
     path: 'atualizar-autores/:id',
     component: AtualizarAutoresComponent
+  },
+  {
+    path: 'remover-livro/:id',
+    component: RemoverLivroComponent
   },
 ];
 

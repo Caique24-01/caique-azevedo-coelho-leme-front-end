@@ -17,7 +17,7 @@ export class AutoresService {
 
   constructor(
     private httpClient: HttpClient,
-  ) { }
+  ) {}
 
   listarTodos(): Observable<Autor[]> {
     return this.httpClient.get<Autor[]>(environment.URL_API + '/autores');
