@@ -14,7 +14,6 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { MessageErroApiComponent } from './components/message-erro-api/message-erro-api.component';
 import { AtualizarAutoresComponent } from './autores/atualizar-autores/atualizar-autores.component';
 import { LivrosComponent } from './livros/livros.component';
-import { RemoverLivroComponent } from './livros/remover-livro/remover-livro.component';
 import { CadastrarLivrosComponent } from './livros/cadastrar-livros/cadastrar-livros.component';
 import { FormLivroComponent } from './livros/form-livro/form-livro.component';
 import { AtualizarLivroComponent } from './livros/atualizar-livro/atualizar-livro.component';
@@ -29,7 +28,6 @@ import { AtualizarLivroComponent } from './livros/atualizar-livro/atualizar-livr
     MessageErroApiComponent,
     AtualizarAutoresComponent,
     LivrosComponent,
-    RemoverLivroComponent,
     CadastrarLivrosComponent,
     FormLivroComponent,
     AtualizarLivroComponent,
