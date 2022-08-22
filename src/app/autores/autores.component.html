@@ -3,7 +3,7 @@
 </div>
 <div class="container">
   <app-messages class="d-flex justify-content-center text-success"></app-messages>
-  <table class="table border border-dark">
+  <table class="table border border-dark px-3">
     <thead>
       <tr>
         <th class="col-3">#</th>
@@ -17,7 +17,7 @@
       <tr *ngFor="let autor of autores">
         <td>{{ autor.id }}</td>
         <td>{{ autor.nome }}</td>
-        <button class="btn btn-outline-primary btn-sm m-1" routerLink="/atualizar-autores/{{ autor.id}}">Editar</button>
+        <button class="btn btn-outline-primary btn-sm" routerLink="/atualizar-autores/{{ autor.id}}">Editar</button>
       </tr>
     </tbody>
   </table>

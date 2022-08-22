@@ -42,7 +42,7 @@ export class AtualizarLivroComponent implements OnInit {
         this.router.navigate(['/livros']);
       },
       error: (erro) => {
-        if (erro.status == 400) {
+        if (erro.status >= 400) {
           this.messagesService.add('Dados incorretos');
         } else {
           this.mensagemErro =

@@ -33,7 +33,7 @@ export class CadastrarLivrosComponent implements OnInit {
         this.router.navigate(['/livros']);
       },
       error: (erro) => {
-        if (erro.status == 400) {
+        if (erro.status >= 400) {
           this.messagesService.add('Dados de cadastro incorretos!');
         } else {
           this.mensagemErro =
