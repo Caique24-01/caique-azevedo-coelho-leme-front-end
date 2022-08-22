@@ -10,9 +10,9 @@ Desenvolvido com [Angular CLI](https://github.com/angular/angular-cli) version 1
 
 ### Comandos: 
 
-npm install -> Após baixar a aplicação  /n
-ng serve --open -> para inicial a aplicação  /n
-OU  /n
-ng serve -> e abrir no navegador htt://localhost:4200/ /n
+npm install -> Após baixar a aplicação  </br>
+ng serve --open -> para inicial a aplicação  </br>
+OU  </br>
+ng serve -> e abrir no navegador htt://localhost:4200/ </br>
 
 ## DESENVOLVIDO POR: CAIQUE AZEVEDO COELHO LEME
