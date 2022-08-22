@@ -18,7 +18,7 @@
         <td>{{ livro.id }}</td>
         <td>{{ livro.titulo }}</td>
         <button class="btn btn-outline-primary btn-sm m-1" routerLink="/atualizar-livro/{{ livro.id }}">Editar</button>
-        <button class="btn btn-outline-primary btn-sm m-1" routerLink="/remover-livro/{{ livro.id }}">Deletar</button>
+        <button class="btn btn-outline-primary btn-sm m-1" (click)="confirmacao(livro.id)">Deletar</button>
       </tr>
     </tbody>
   </table>

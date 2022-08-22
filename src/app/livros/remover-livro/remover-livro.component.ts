@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LivrosService } from 'src/app/services/livros.service';
 
 @Component({
   selector: 'app-remover-livro',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RemoverLivroComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private livrosServices: LivrosService,
+  ) { }
 
   ngOnInit(): void {
+  }
+
+  remover() {
+    this.livrosServices.removerLivro
   }
 
 }

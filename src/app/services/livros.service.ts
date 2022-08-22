@@ -30,4 +30,8 @@ export class LivrosService {
   editarLivro(id: number, formData: Livro): Observable<Livro>{
     return this.httpClient.put<Livro>(environment.URL_API + '/livros/' + id, formData);
   }
+
+  removerLivro(id: number): Observable<Livro> {
+    return this.httpClient.delete<Livro>(environment.URL_API + '/livros/' + id)
+  }
 }
