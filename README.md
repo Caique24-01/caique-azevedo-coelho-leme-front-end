@@ -6,13 +6,14 @@ Desenvolvido com [React](https://pt-br.reactjs.org/) version 17.0.2. e Node.js v
 
 ## Como rodar a aplicação:
 
-É necessário o Node.js
+É necessário o Angular e Node.js
 
 ### Comandos: 
 
 npm install -> Após baixar a aplicação  </br>
-npm start  -> para inicial a aplicação  </br>
-e abrir no navegador http://localhost:3000/ </br>
+ng server --open  -> para inicial a aplicação  </br>
+OU </br>
+ng serve e abrir no navegador http://localhost:4200/ </br>
 
 
 ## DESENVOLVIDO POR: CAIQUE AZEVEDO COELHO LEME
